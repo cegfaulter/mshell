@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   hash_map_method.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 15:18:24 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/09 15:25:47 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:12:47 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hash_map.h"
 
-t_map			*init_map(void)
+t_cmap			*init_map(void)
 {
 	int		iter;
-	t_map	*map;
+	t_cmap	*map;
 
 	iter = 0;
-	map = malloc(sizeof(t_map));
+	map = malloc(sizeof(t_cmap));
 	while (iter < SIZE)
 	{
 		map->lst[iter] = NULL;
@@ -44,12 +44,12 @@ int				get_hash_code(const void *key, size_t key_size)
 	return (result % SIZE);
 }
 
-void			set_value(t_map *map, const void *key,
+void			set_value(t_cmap *map, const void *key,
 		void *value, size_t key_size)
 {
 	int				backet_id;
 	t_key_value		*k_v;
-	t_list			*list;
+	t_clist			*list;
 
 	backet_id = get_hash_code(key, key_size);
 	if (map->lst[backet_id])
@@ -71,10 +71,10 @@ void			set_value(t_map *map, const void *key,
 	return ;
 }
 
-void			*get_value(t_map *map, const void *key, size_t key_size)
+void			*get_value(t_cmap *map, const void *key, size_t key_size)
 {
 	int		id;
-	t_list	*list;
+	t_clist	*list;
 
 	id = get_hash_code(key, key_size);
 	if (!map->lst[id])
@@ -89,7 +89,7 @@ void			*get_value(t_map *map, const void *key, size_t key_size)
 	return (NULL);
 }
 
-void			clear_map(t_map **map, void free_data(void *kv))
+void			clear_map(t_cmap **map, void free_data(void *kv))
 {
 	int		iter;
 

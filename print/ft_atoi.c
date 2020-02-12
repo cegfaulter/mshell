@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 18:04:57 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/07 15:50:15 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 15:38:35 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print.h"
 
-long		ft_atoi(char **s)
+long		ft_catoi(char **s)
 {
 	long	result;
 	long	sign;

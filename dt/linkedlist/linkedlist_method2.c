@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   linkedlist_method2.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 15:00:21 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/09 15:01:40 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:06:47 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linkedlist.h"
 
-void	*free_node(t_list **list)
+void	*free_node(t_clist **list)
 {
 	void	*data;
 

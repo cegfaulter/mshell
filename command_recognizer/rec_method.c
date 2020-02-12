@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rec_method.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <mel-omar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 16:02:30 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/11 21:17:07 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:25:24 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char		*get_command(char **str)
 		new_str[iter] = **str;
 		(*str)++;
 	}
-	new_str[len] = 0;
 	return (new_str);
 }
 
@@ -56,27 +55,27 @@ t_rec		*get_data(char *str, int i)
 	return (rec);
 }
 
-void		ft_set_command(t_map *cd, char *key, t_rec *value)
+void		ft_set_command(t_cmap *cd, char *key, t_rec *value)
 {
-	set_value(cd, key, value, ft_strlen(key));
+	set_value(cd, key, value, ft_cstrlen(key));
 }
 
-t_rec		*get_cdata(t_map *cd, char *key)
+t_rec		*get_cdata(t_cmap *cd, char *key)
 {
 	t_rec	*value;
 
-	value = (t_rec *)get_value(cd, key, ft_strlen(key));
+	value = (t_rec *)get_value(cd, key, ft_cstrlen(key));
 	return (value);
 }
 
-t_map		*get_cmd_data(char *str)
+t_cmap		*get_cmd_data(char *str)
 {
-	t_map	*cmd_data;
+	t_cmap	*cmd_data;
 	t_rec	*data;
 	char	*command;
 	char	**spliter;
 
-	spliter = ft_split(str, '|', "\"'");
+	spliter = ft_csplit(str, '|', "\"'");
 	cmd_data = init_map();
 	while (*spliter)
 	{

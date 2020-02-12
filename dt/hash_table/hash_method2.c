@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   hash_method2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <mel-omar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 15:17:26 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/09 15:28:18 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:09:46 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hash_map.h"
 
-t_list		*get_keys(const t_map *map)
+t_clist		*get_keys(const t_cmap *map)
 {
-	t_list			*list;
-	t_list			*lst;
+	t_clist			*list;
+	t_clist			*lst;
 	int				iter;
 	unsigned char	*key;
 

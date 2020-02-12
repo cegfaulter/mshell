@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   linkedlist_method.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <mel-omar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 14:37:32 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/09 15:02:44 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:07:15 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linkedlist.h"
 
-void	append(t_list **list, void *data)
+void	append(t_clist **list, void *data)
 {
-	t_list	*temp;
-	t_list	*before;
+	t_clist	*temp;
+	t_clist	*before;
 
-	temp = malloc(sizeof(t_list));
+	temp = malloc(sizeof(t_clist));
 	temp->data = data;
 	temp->next = NULL;
 	if (!(*list))
@@ -31,11 +31,11 @@ void	append(t_list **list, void *data)
 	}
 }
 
-void	*pop(t_list **list)
+void	*pop(t_clist **list)
 {
 	void	*data;
-	t_list	*before;
-	t_list	*temp;
+	t_clist	*before;
+	t_clist	*temp;
 
 	data = NULL;
 	if (!(*list))
@@ -57,11 +57,11 @@ void	*pop(t_list **list)
 	return (data);
 }
 
-void	iterate_list(const t_list *list, void func(void *data))
+void	iterate_list(const t_clist *list, void func(void *data))
 {
-	t_list	*temp;
+	t_clist	*temp;
 
-	temp = (t_list *)list;
+	temp = (t_clist *)list;
 	while (temp)
 	{
 		func(temp->data);
@@ -69,7 +69,7 @@ void	iterate_list(const t_list *list, void func(void *data))
 	}
 }
 
-void	clear_list(t_list **list, void free_data(void *data))
+void	clear_list(t_clist **list, void free_data(void *data))
 {
 	if (!*list)
 		return ;
@@ -80,12 +80,12 @@ void	clear_list(t_list **list, void free_data(void *data))
 	*list = NULL;
 }
 
-size_t	length(const t_list *list)
+size_t	length(const t_clist *list)
 {
 	size_t	len;
-	t_list	*lst;
+	t_clist	*lst;
 
-	lst = (t_list *)list;
+	lst = (t_clist *)list;
 	len = 0;
 	while (lst)
 	{

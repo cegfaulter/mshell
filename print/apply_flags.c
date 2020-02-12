@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   apply_flags.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 18:30:28 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/07 18:38:53 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:00:41 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	apply_flags(t_flags *f, va_list *ap)
 	if (f->is_perc)
 		display_with_perc(f, length, &sign);
 	if (f->format == 's')
-		ft_putstr(str, ((f->perc >= 0) ? f->perc : length));
+		ft_cputstr(str, ((f->perc >= 0) ? f->perc : length));
 	else if (f->format == 'd')
 		display_number(number, f, sign);
 	else

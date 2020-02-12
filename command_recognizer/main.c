@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <mel-omar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 19:05:21 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/11 21:23:38 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:20:57 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "recognizer.h"
 
-void		display_map(t_map *map)
+void		display_map(t_cmap *map)
 {
-	t_list		*keys;
-	t_list		*iter_key;
+	t_clist		*keys;
+	t_clist		*iter_key;
 
 	keys = get_keys(map);
+	print("%d\n",  length(keys));
 	iter_key = keys;
 	while (iter_key)
 	{
@@ -31,9 +32,9 @@ void		display_map(t_map *map)
 
 int			main(void)
 {
-	char		*str = "echo blablabla >> file1 makaine maidare > file2 ejdj | grep";
-	t_map		*cmd_data;
-	t_list		*keys;
+	char		*str = "\"bin\"\"/echo\" blablabla >> \"file1  makaine\" maidare > file2 ejdj | grep > file | b > ile";
+	t_cmap		*cmd_data;
+	t_clist		*keys;
 
 	cmd_data = get_cmd_data(str);
 	display_map(cmd_data);

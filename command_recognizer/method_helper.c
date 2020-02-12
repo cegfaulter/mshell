@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   method_helper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <mel-omar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 18:50:03 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/11 21:11:26 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:25:53 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "recognizer.h"
 
-char		*ft_substr(char *str, int len)
+char		*ft_csubstr(char *str, int len)
 {
 	char	*s;
 	int		iter;
@@ -28,7 +28,7 @@ char		*ft_substr(char *str, int len)
 	return (s);
 }
 
-int			ft_strlen(const char *s)
+int			ft_cstrlen(const char *s)
 {
 	int		len;
 
@@ -38,7 +38,7 @@ int			ft_strlen(const char *s)
 	return (len);
 }
 
-char		*ft_strcpy(char *dst, const char *src, int len)
+char		*ft_cstrcpy(char *dst, const char *src, int len)
 {
 	int		iter;
 
@@ -54,23 +54,23 @@ char		*ft_strcpy(char *dst, const char *src, int len)
 	return (dst);
 }
 
-char		*ft_strjoin(char *text, char *s)
+char		*ft_cstrjoin(char *text, char *s)
 {
 	char	*new_text;
 	int		len1;
 	int		len2;
 	int		iter;
 
-	len1 = (text) ? ft_strlen(text) : 0;
-	len2 = (s) ? ft_strlen(s) : 0;
+	len1 = (text) ? ft_cstrlen(text) : 0;
+	len2 = (s) ? ft_cstrlen(s) : 0;
 	new_text = malloc(sizeof(char) * (len1 + len2 + 1));
-	ft_strcpy(new_text, text, len1);
+	ft_cstrcpy(new_text, text, len1);
 	if (len1 && len2)
 	{
-		ft_strcpy(new_text + len1, " ", 1);
+		ft_cstrcpy(new_text + len1, " ", 1);
 		len1++;
 	}
-	ft_strcpy(new_text + len1, s, len2);
+	ft_cstrcpy(new_text + len1, s, len2);
 	free(text);
 	free(s);
 	return (new_text);

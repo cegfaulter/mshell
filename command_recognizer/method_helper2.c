@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   method_helper2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <mel-omar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 18:23:45 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/11 21:15:03 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:24:08 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			get_operator(t_rec *rec, char *str, int *is_)
 		iter = 1;
 		while (str[i + iter] == c)
 			iter++;
-		append(&rec->oper, ft_substr(str + i, iter));
+		append(&rec->oper, ft_csubstr(str + i, iter));
 		is_[0] = 1;
 	}
 	return (i + iter);
@@ -49,7 +49,7 @@ int			get_files(t_rec *rec, char *str, char *ignored, int *is_)
 			switcher(str[i + iter], ignored);
 		iter++;
 	}
-	append(&rec->files, ft_substr(str + i, iter));
+	append(&rec->files, ft_csubstr(str + i, iter));
 	i += iter;
 	is_[0] = 0;
 	return (i);
@@ -71,9 +71,9 @@ int			get_text(t_rec *rec, char *str, char *ignored)
 		iter++;
 	}
 	if (iter > 0)
-		rec->text = ft_strjoin(rec->text, ft_substr(str + i, iter));
+		rec->text = ft_cstrjoin(rec->text, ft_csubstr(str + i, iter));
 	else
-		rec->text = ft_strjoin(rec->text, NULL);
+		rec->text = ft_cstrjoin(rec->text, NULL);
 	i += iter;
 	return (i);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 19:33:02 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/09 18:48:05 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:21:31 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static int			copystr(char *dst, char *src, int start, int len)
 	return (len);
 }
 
-char				**ft_split(char *s, char c, char *ignored)
+char				**ft_csplit(char *s, char c, char *ignored)
 {
 	char		**spliter;
 	int			count_words;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 17:34:33 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/07 18:13:30 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 15:44:32 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ typedef struct	s_flags
 
 size_t			g_len;
 
-void			ft_putchar(char c);
-void			ft_putstr(char *s, long len);
+void			ft_cputchar(char c);
+void			ft_cputstr(char *s, long len);
 void			ft_repeat_char(char c, int repeat);
-void			ft_putnbr(long number, int base, char type);
-long			ft_atoi(char **s);
+void			ft_cputnbr(long number, int base, char type);
+long			ft_catoi(char **s);
 long			lenstr(char *s);
 long			len_num(long num, int base);
 void			init_flags(t_flags *f);

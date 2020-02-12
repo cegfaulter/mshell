@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 19:05:47 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/11 21:10:46 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:20:11 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ void		free_data(void *kv)
 	free(key_value);
 }
 
-void		free_cmd_data(t_map **cmd_data)
+void		free_cmd_data(t_cmap **cmd_data)
 {
 	clear_map(cmd_data, free_data);
 }
 
-void		free_keys(t_list **keys)
+void		free_keys(t_clist **keys)
 {
 	free(*keys);
 	*keys = NULL;

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-omar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-omar <mel-omar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 18:56:22 by mel-omar          #+#    #+#             */
-/*   Updated: 2020/02/07 15:18:09 by mel-omar         ###   ########.fr       */
+/*   Updated: 2020/02/12 16:01:56 by mel-omar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print.h"
-#include <stdio.h>
 
 int		print(char *format, ...)
 {
@@ -31,7 +30,7 @@ int		print(char *format, ...)
 		}
 		else
 		{
-			ft_putchar(*format);
+			ft_cputchar(*format);
 			format++;
 		}
 	}
